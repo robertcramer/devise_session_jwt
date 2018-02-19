@@ -57,5 +57,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Add gems for authentication
 gem 'devise'
+gem 'jwt'
+gem 'simple_command'
+
 
 ruby '2.5.0'
