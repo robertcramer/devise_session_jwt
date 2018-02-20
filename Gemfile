@@ -60,5 +60,8 @@ gem 'devise'
 gem 'jwt'
 gem 'simple_command'
 
+# Enable cross origin requests
+gem 'rack-cors', :require => 'rack/cors'
+
 
 ruby '2.5.0'

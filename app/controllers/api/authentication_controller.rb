@@ -13,8 +13,12 @@ class Api::AuthenticationController < Api::BaseController
   def sign_up
     if User.find_by_email(user_params[:email])
       render json: { error: 'Email already taken' }, status: :unauthorized
+    elsif User.find_by_username(user_params[:username])
+      render json: { error: 'Username already taken' }, status: :unauthorized
     else
-      user = User.create(email: user_params[:email], password: user_params[:password])
+      user = User.create(email: user_params[:email],
+                         password: user_params[:password],
+                         username: user_params[:username])
       user.send_confirmation_instructions
       render json: { success: 'User created. Please confirm account.' }, status: :ok
     end
