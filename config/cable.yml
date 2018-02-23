@@ -7,4 +7,4 @@ test:
 production:
   adapter: redis
   url: redis://localhost:6379/1
-  channel_prefix: blubod_production
+  channel_prefix: devise_session_and_jwt_production

@@ -1,5 +1,5 @@
 {
-  "name": "blubod",
+  "name": "devise_session_and_jwt",
   "private": true,
   "dependencies": {}
 }
